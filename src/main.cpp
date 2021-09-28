@@ -59,7 +59,7 @@ void loop() {
     HTTPClient http;
     http.begin(database_url);
     http.addHeader("Content-Type", "application/json");
-    char payload[100];
+    char payload[255];
     snprintf(
       payload,
       sizeof(payload),
@@ -74,7 +74,7 @@ void loop() {
 
     http.end();
   }
- 
+
   delay(120000);
 }
 
